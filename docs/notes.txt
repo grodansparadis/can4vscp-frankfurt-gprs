@@ -1,0 +1,174 @@
+160 chars max.
+70 in non latin languages.
+
+http://www.txtonline.com/sms_at_commands.htm
+https://oldlight.wordpress.com/2009/06/16/tutorial-using-at-commands-to-send-and-receive-sms/
+http://www.developershome.com/sms/cpmsCommand.asp
+
+
+ATI - Display product identification information
+================================================
+Cinterion
+MC55i
+REVISION 01.201
+
+OK
+
+
+AT+CGMI - Request manufacturer identification (AT+CGMI=?)
+=========================================================
+Cinterion
+
+OK
+
+AT+CGMM - Request model identification (AT+CGMM=?)
+==================================================
+MC55i
+
+OK
+
+AT+GMM - Request model identification (AT+GMM=?)
+================================================
+MC55i
+
+OK
+
+AT+CGMR - Request revision identification of software status (AT+CGMR=?)
+========================================================================
+REVISION 01.201
+
+OK
+
+AT+CGSN - Request International Mobile Equipment Identity (IMEI) (AT+CGSN=?)
+AT+GSN (AT+GSN=?)
+AT+CIMI (AT+CIMI=?)
+============================================================================
+357552104061204
+
+OK
+
+
+AT+CSQ - Get signal quality
+===========================
++CSQ: 25,99
+
+OK
+
+
+	S: 220 smtp.example.com ESMTP Server
+	C: EHLO client.example.com
+	S: 250-smtp.example.com Hello client.example.com
+	S: 250-AUTH GSSAPI DIGEST-MD5
+	S: 250-ENHANCEDSTATUSCODES
+	S: 250 STARTTLS
+	C: STARTTLS
+	S: 220 Ready to start TLS
+		... TLS negotiation proceeds. 
+		Further commands protected by TLS layer ...
+	C: EHLO client.example.com
+	S: 250-smtp.example.com Hello client.example.com
+	S: 250 AUTH GSSAPI DIGEST-MD5 PLAIN
+	C: AUTH PLAIN dGVzdAB0ZXN0ADEyMzQ=
+	S: 235 2.7.0 Authentication successful
+	
+
+AT+CMGL - List SMS storage.	
+===========================
+
+AT+CMGR=<index|"ALL"> - Read SMS
+================================	
+
+AT+CMGL="ALL" - List all messages
+=================================
+"ALL" must be in uppercase
+
+AT+CPMS? - Get message count
+============================
+
+	
+-------------------------------------------------------------------------------	
+	
+	
+Send event
+==========	
+	
+E:head;head,class,type,obid,time-stamp,GUID,data1,data2,data3....
+
+
+Send commands
+=============
+
+Control Class
+-------------
+
+C:Mute;0|1;zone;subzone
+	1=mute
+	0=unmute
+	mnemonic can be used for zone;subzone pair
+C:allamps;0|1;zone;subzone
+	1=on
+	0=off
+	mnemonic can be used for zone;subzone pair	
+C:Open;zone;subzone
+	mnemonic can be used for zone;subzone pair
+C:Close;zone;subzone
+	mnemonic can be used for zone;subzone pair	
+C:Turnon;zone;subzone
+	mnemonic can be used for zone;subzone pair
+C:Turnoff;zone;subzone
+	mnemonic can be used for zone;subzone pair
+C:Start;zone;subzone
+	mnemonic can be used for zone;subzone pair
+C:Stop;zone;subzone
+	mnemonic can be used for zone;subzone pair
+C:Reset;zone;subzone;optional byte
+	mnemonic can be used for zone;subzone pair
+	
+Send user commands
+==================
+U:any text that translates to one or several events.  (regular expression?)
+
+
+Macros
+======
+M:SLEEP <seconds>
+
+
+AT+CMGR=1
++CMGR: 1,,115
+07916407058099F904038131F33E005130621131624072D2B4FB0C8ACD662E104A9A769F412B9AED06B3C566B3D86C0632CB1F6E509DCE0EBBC965BA2B0522D641E8B01C2403B9F36150BB4C2697D96137B9EC06A541CDB738CD9EDBC37297C22997E940B0DB0C569BCD62341BC8298FE940B0DB0C569BCD62341B
+
+
+AT+CMGR=2
++CMGR: 1,,134
+07916407058099F9040B916437503341F6000051306211511040832B9AED3683D566B318CD064287E520335F3EE7AFE9A0309D0E723F40E4F41914039D1FEE330B2483C56A2DD8AC25B381D66C5D2CA68BCD148DA03DBCA6A7ED657918742EBBDF6D50984E07CDD7E9F13A0C9AB7E72D7A194F2FBB41D6E6346805D1D36C368846B3D9148DA61DED0251CBEC7418
+
+AT+CMGR=3
++CMGR: 1,,39
+07916407058099F9040B916437503341F600005130621173254016D4F29C0E6A97E7F3F0B90C9A97DD7490383C5E03
+
+AT+CMGR=1
++CMGR: 1,,115
+07916407058099F904038131F33E005130621131624072D2B4FB0C8ACD662E104A9A769F412B9AED06B3C566B3D86C0632CB1F6E509DCE0EBBC965BA2B0522D641E8B01C2403B9F36150BB4C2697D96137B9EC06A541CDB738CD9EDBC37297C22997E940B0DB0C569BCD62341BC8298FE940B0DB0C569BCD62341B
+
+
+
+
+Registers
+=========
+
+Phone number 1   	20
+Phone number 2 		20
+Phone number 3    	20 
+Phone number 4      20 
+Bitfield phone numbers to use for alarm.
+Bitfiled phone numbers to use for reports.
+Bitfiled phone numbers to use for measurements.
+Valid originating phone number 1   		20
+Valid originating phone number 2 		20
+Valid originating phone number 3    	20 
+Valid originating phone number 4      	20
+Bitfield: What originating phone 1 can do.	
+Bitfield: What originating phone 2 can do.
+Bitfield: What originating phone 3 can do.
+Bitfield: What originating phone 4 can do.
