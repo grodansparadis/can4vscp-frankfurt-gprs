@@ -157,6 +157,8 @@ AT+CMGR=1
 Registers
 =========
 
+SMS
+===
 Phone number 1   	20
 Phone number 2 		20
 Phone number 3    	20 
@@ -172,3 +174,33 @@ Bitfield: What originating phone 1 can do.
 Bitfield: What originating phone 2 can do.
 Bitfield: What originating phone 3 can do.
 Bitfield: What originating phone 4 can do.
+
+EMAIL
+=====
+Email address to send events/alarms to.
+mailserver
+port for mailserver
+username mail server
+password mail server
+pop3-server
+port for pop3-server
+username pop3 server
+password pop3 server
+passphrase for command emails.
+
+HTTP REST
+=========
+VSCP daemon REST i/f host
+port for VSCP daemon rest i/f
+username
+password
+
+TCP/IP
+======
+VSCP daemon REST i/f host
+port for VSCP daemon host
+username 
+password
+
+
+
